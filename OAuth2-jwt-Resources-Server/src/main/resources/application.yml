@@ -1,0 +1,27 @@
+#Konfigurasi
+server:
+  port: 10001
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_oauth2_resources
+    username: root
+    password: root
+  jpa:
+    generate-ddl: true
+    show-sql: true
+
+security:
+  oauth2:
+    resource:
+      filter-order: 3
+      jwt:
+        key-value: -----BEGIN PUBLIC KEY-----
+                   MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtryOttO5wYPoibBiND9I
+                   zh/vuzGL1ba/u3oWNQVNocXOZC70ttbrAJA9hJq5JluIfIw532310F3c40TKHuMJ
+                   QN18eJjV4FNm2uk/r7E97vpUhfYB+F/zBdr4jMn3ttSzPRLsvqm5UWgeqKNiGq4l
+                   jMFlNXZabdP40YjwPsJ2i/5HgKUvgGyGKgc+XL3M/v9nYd1K4Pj2gUXlBzjqP/kl
+                   K9m5hF39rv9cfxvTGj9r7isWy3XNBR1PH27KRajOWmQp6udUhpElzJXpJRwnc+dA
+                   tfFn3VuUH4YoN9dUO3aYJjOPBM5n0NVYcQgCBRW0GqzGroSz1ESoSSExkrsaA7wl
+                   dwIDAQAB
+                   -----END PUBLIC KEY-----
